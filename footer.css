@@ -1,0 +1,62 @@
+:root {
+  --blue: hsl(191, 81%, 49%);
+  --yellow: hsl(46, 70%, 51%);
+  --red: hsl(354, 64%, 47%);
+  --teal: hsl(171, 66%, 57%);
+  --purple: hsl(257, 61%, 41%);
+  --navy: hsl(230, 61%, 48%);
+}
+footer {
+  position:relative;
+  color:white;
+  font-size: 1.5rem;
+}
+footer:hover img {
+  filter: blur(5px);
+}
+footer #span {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem 2rem 2rem;
+}
+footer img {
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:max-content;
+  width:100%;
+  z-index:-1;
+  opacity:0.8;
+}
+footer #span span {
+  font-family: 'Livvic', sans-serif;
+  font-weight: 900;
+  text-align: left;
+  font-size: 2.15rem;
+  background-color: var(--blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+footer #span span {
+  background-image: linear-gradient(
+    60deg, 
+    var(--blue),
+    var(--yellow),
+    var(--red), 
+    var(--teal),  
+    var(--purple), 
+    var(--navy) );
+  animation: text-animation-rev-simple 1.5s ease alternate-reverse;
+}
+@keyframes text-animation-rev-simple {
+    0% {
+      background-size: 600%;
+    }
+    20% {
+      background-size: 600%;
+    }
+    100% {
+      background-size: 100%;
+    }
+  }

@@ -1,0 +1,77 @@
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding:0.5rem 3rem;
+}
+header #search {
+  border:2px solid skyblue;
+  border-radius: 20px;
+  display:flex;
+}
+header #search:focus {
+  border:2px solid cornflowerblue;
+}
+header #search input {
+  border:none;
+  border-radius: 20px;
+  padding:0.2rem 0.5rem;
+}
+header #search input:focus {
+  outline:none;
+  caret-color: skyblue;
+}
+header #search #searchIcon{
+  min-height:100%;
+  padding:0 2px 0 9px;
+  background-color: skyblue;
+  border-radius:20px;
+  color:white;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#chooseLang .switch {
+	position:relative;
+	display:inline-block;
+	width:6vw;
+	height:1.5vw;
+	background-color:rgba(0, 0, 0, 0.25);
+	border-radius:2vw;
+	transition:all 0.3s;
+	margin-left:auto;
+	margin-right:1rem;
+  border:1px solid purple;
+}
+#chooseLang .switch:after {
+  content: '';
+  position:absolute;
+  width:3.65vw;
+  height:100%;
+  border-radius:1.6vw;
+  background-color:#7983ff;
+  top:0;
+  left:0;
+  transition:all 0.3s;
+  border:0px solid red;
+	background-image:url("./images/englishLang.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+#chooseLang input[type='checkbox']:checked + .switch:after {
+	transform:translateX(2vw);
+  border:0px solid blue;
+  background-image:url("./images/nepalLang.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+#chooseLang input[type='checkbox']:checked + .switch {
+  background-color:rgba(0, 0, 0, 0.25);
+}
+#chooseLang .offscreen {
+  position:absolute;
+  left:-999999px;
+} 
